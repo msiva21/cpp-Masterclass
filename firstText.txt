@@ -1,0 +1,2 @@
+Enter your favorite number between 1-100: 
+Amazing that's my favorite number too!

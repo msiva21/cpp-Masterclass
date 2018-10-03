@@ -1,0 +1,4 @@
+1) Run the program.
+2)Type this into terminal: ./fileName | tee textName.txt
+
+The "fileName" is the file you gave to the program you compiled, the "textName" is the name the new .txt file will be saved as.

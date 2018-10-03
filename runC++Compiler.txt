@@ -1,0 +1,5 @@
+1)Type this into terminal: g++ -Wall -std=c++14 file.cpp -o fileName
+2)Press Enter
+3)Type this into terminal: ./fileName
+
+The "file.cpp" is the file you want to compile. The "fileName" is the name of the object file you want to create, you then call that object file on step 3 and runs it.
