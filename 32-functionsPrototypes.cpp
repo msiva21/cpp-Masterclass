@@ -7,7 +7,8 @@ const double pi{3.14159};
 
 // We declare the functions at the top of the main function usually, but in cases we dont't want to do this or when using
 // header files, we can use prototypes. Prototypes are function declarations at the top that only need the parameters data
-// type but it is best practice to give the name of the parameters for documentation purposes.
+// type but it is best practice to give the name of the parameters for documentation purposes. We write the DEFAULT values
+// here on the prototypes
 double volume_cylinder(double r, double h);
 void cylinder();
 double area_circle(double r);
