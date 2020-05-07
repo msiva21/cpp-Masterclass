@@ -5,17 +5,23 @@ using namespace std;
 
 int main() {
 
+    // In order to de-reference a pointer, we also use the * symbol.
+    // Dereferencing a pointer means that you access the value that the pointer points to.
+
     int score{100};
     int *score_ptr{&score};
 
-    cout << score_ptr << endl; // The value of the pointer still is just an address
-    cout << *score_ptr << endl; // However, the pointer points to score, so when dereferencing that pointer the value will be 100
-    
-    *score_ptr = 200; // Change the value of the variable this pointer is pointing to
+    cout << endl;
+    cout << "Value of score_ptr: " << score_ptr << endl; // The value of the pointer still is just an address.
+    cout << "Dereference of score_ptr: " << *score_ptr << endl; // Dereference of that pointer will be 100.
 
-    cout << score_ptr << endl;     // 200
-    cout << *score_ptr << endl;    // 200
-    cout << score << endl;
+    *score_ptr = 200; // Change the value of the variable this pointer is pointing to.
+
+    cout << endl;
+    cout << "After *score_ptr = 200" << endl;
+    cout << "Value of score_ptr:  " << score_ptr << endl;     
+    cout << "Value of *score_ptr: " << *score_ptr << endl;    // 200
+    cout << "Value of score: " << score << endl;              // 200
 
     cout << "\n---------------------" << endl;
     double high_temp{100.7};
@@ -30,9 +36,9 @@ int main() {
     string name{"Frank"};
     string *str_ptr{&name};
 
-    cout << *str_ptr << endl;
+    cout << *str_ptr << endl;        // "Frank"
     name = "James";
-    cout << *str_ptr << endl;
+    cout << *str_ptr << endl;        // "James"
 
     cout << "\n---------------------" << endl;
     vector<string> stooges{"Larry", "Moe", "Curly"};

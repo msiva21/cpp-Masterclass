@@ -2,7 +2,14 @@
 #include <random>
 using namespace std;
 
-// We are passing an address here, and then dereferencing it. So in this case, we are passing values by reference because we will affect the variable directly.
+/*******************
+Pointers CAN have null values, where as references CANNOT. So they are used in certain occasions where you
+expect null references.
+*********************/
+
+
+// We are passing an address here, and then dereferencing it. So in this case, we are passing values by reference
+// because we will affect the variable directly.
 void double_data(int *int_ptr){
     *int_ptr *= 2;
 }
@@ -19,9 +26,10 @@ void display(const vector<string> *const vec_ptr){
     }
     cout << endl;
 }
-// The sentinel is the value that we want to stop at
-void display2(int *array, int sentinel){
+// The sentinel is the value that we want to stop at.
+void display2(const int *array, int sentinel){
     while(*array != sentinel){
+        // *array = 5;          // This is not allowed because you said the pointer points to a const type.
         cout << *array++ << " ";
     }
     cout << endl;

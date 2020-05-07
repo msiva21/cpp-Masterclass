@@ -7,9 +7,9 @@ int main(){
     x = 23 + 544;
     // 100 + 2 = x;  // (100 + 2) is not an l-value
 
-    // Right values: Everything that is not a left value, literals!!!
+    // Right values: Everything that is not a left value: literals, a temporary.
     int y{90}; // 90 is an r-value
-    y = 40 + x;  // (40 + x) is an r-value
+    y = 40 + x;  // (40 + x) is an r-value. This whole expression is "a temporary" created by the compiler.
 
     // Left Values references: passing a left value to a reference
     

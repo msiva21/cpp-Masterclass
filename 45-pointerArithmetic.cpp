@@ -30,7 +30,7 @@ int main()
     string *p2 {&s2};
     string *p3 {&s1};
 
-    cout << boolalpha;
+    cout << boolalpha; // Prints true/false
     // Evaluate the address of both pointers
     cout << p1 << " == " << p2 << " : " << (p1 == p2) << endl;
     cout << p1 << " == " << p3 << " : " << (p1 == p3) << endl;
@@ -52,8 +52,9 @@ int main()
     char_ptr1 = &name[0];  // F
     char_ptr2 = &name[3];  // n
 
-    cout << "In the string " << name << ", " << *char_ptr2 << " is " << (char_ptr2 - char_ptr1) << " characters away from " << *char_ptr1 << endl;
+    cout << "In the string '" << name << "', " << *char_ptr2 << " is " << (char_ptr2 - char_ptr1) << " characters away from " << *char_ptr1 << endl;
 
+    cout << "\n-----------------------------" << endl;
     // Pointers to constants
     // The data pointed to by the pointer CANNOT be changed
     // Pointer can change and point somewhere else.
@@ -64,8 +65,8 @@ int main()
     cout << test_ptr << endl;
     cout << *test_ptr << endl;
 
-    test_ptr = &low_score;
-    // *test_ptr = 45;         // This is not allaowed.
+    test_ptr = &low_score;     // This is allowed.
+    // *test_ptr = 45;         // This is NOT allowed.
     cout << &low_score <<endl;
     cout << test_ptr << endl;
     cout << *test_ptr << endl;
@@ -74,7 +75,7 @@ int main()
     // The data pointed by the pointer can be changed.
     // Pointer CANNOT change and point somewhere else
     cout << "-------------------------" << endl;
-    int high_num{1000};
+    int high_num{5000};
     int *const my_num{&high_num};
 
     cout << my_num << endl;

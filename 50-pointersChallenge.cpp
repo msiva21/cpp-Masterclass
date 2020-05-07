@@ -1,7 +1,9 @@
 #include <iostream>
 using namespace std;
 
-// You're only creating a third array so you have no business changing the pointers or what they point to,ergo you must use const
+// You're only creating a third array so you have no business changing the pointers or what they point to,
+// ergo you better use const.
+
 int *apply_all(const int *const arr1, size_t size1, const int *const arr2, size_t size2){ 
     int *new_array{nullptr};
     size_t new_size{size1 * size2};
@@ -17,17 +19,18 @@ int *apply_all(const int *const arr1, size_t size1, const int *const arr2, size_
     return new_array;
 }
 
-void print(const int *const array, size_t size){ // This function expects a constant pointer point to a constant int
+void print(const int *const array, size_t size){ // This function expects a constant pointer point to a constant int.
+    cout << "[ ";
      for(size_t i{0}; i < size; i++){
          cout << array[i] << " ";
      }
-     cout << endl;
+     cout << ']'<< endl;
 }
 
 int main(){
 
-    const size_t array1_size{5};
-    const size_t array2_size{3};
+    constexpr size_t array1_size{5};
+    constexpr size_t array2_size{3};
 
     int array1[]{1, 2, 3, 4, 5};
     int array2[]{10, 20, 30};
@@ -43,7 +46,7 @@ int main(){
 
     cout << "Result: ";
     print(results, results_size);
-    delete[] results;
+    delete[] results;                                // Don't forget to free up the storage.
 
     cout << endl;
     return 0;

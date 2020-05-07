@@ -9,13 +9,14 @@ int main(){
     int num{10};
     cout << "\nvalue of num is " << num << endl;
     cout << "sizeof num is " << sizeof num << endl;
-    cout << "address of num is " << &num << endl;
+    cout << "address of num is " << &num << endl; // Use the ampersand sign to find the address of a variable
 
     // Pointer variable
     int *p;
     cout << "\nvalue of p is " << p << endl; // This is a garbage value since it was not initialized
-    cout << "size of p is " << sizeof p << endl; // Pointers pointing to different types have ALL the same size, but this size depends on the machine.
-    cout << "address of p is " << &p << endl; // Use the ampersand sign to find the address of a variable
+    cout << "size of p is " << sizeof p << endl; // ALL pointers in a program have the same size, which depends on the machine.
+                                                 // Don't confuse the size of a pointer to the size of what it points to.
+    cout << "address of p is " << &p << endl;
     p =nullptr; // The address that p is pointing is set to 0, so it's pointing nowhere.
     cout << "value of p when p=nullptr is " << p << endl;
 
@@ -37,7 +38,7 @@ int main(){
 
     int *score_ptr{nullptr}; // Initialize the pointer to zero
 
-    score_ptr = &score; // Set the pointer to the address of score
+    score_ptr = &score; // Set the pointer to the address of score.
     cout << "\nValue of score is " << score << endl;
     cout << "Address of score is   " << &score << endl;
     cout << "Value of score_ptr is " << score_ptr << endl;
